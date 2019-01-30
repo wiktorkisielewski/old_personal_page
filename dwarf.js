@@ -273,7 +273,6 @@
 
     play_button.addEventListener('click', function (e) {
         e.stopPropagation();
-        document.body.appendChild(dust);
         document.body.appendChild(terrain);
         document.body.appendChild(terrain_2);
         document.body.removeChild(play_button);
@@ -289,6 +288,8 @@
         document.body.appendChild(start_cover);
     }, false);
     
+     runing = new Audio('steps2.mp3');
+
     start_button.addEventListener('click', function (e) {
         e.stopPropagation();
         document.body.removeChild(start_button);
@@ -299,6 +300,7 @@
             ground_move();
             randomize_tree_spawn();
             tup_tup.style.visibility = ('visible');
+            runing.play();
         }, 2000);
     }, false);
     
