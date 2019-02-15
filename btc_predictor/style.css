@@ -1,0 +1,198 @@
+*{  padding: 0;
+    border: 0;
+    line-height: 1.4em;
+    vertical-align: baseline;
+    text-decoration: none;
+    outline: 0;
+    font-weight: 400; 
+    color: #000;
+    list-style: none;
+    margin: 0;
+    }
+
+body {
+    background-image: url("bitcoin_logo.png");
+    background-size: auto 50%;
+    background-repeat: no-repeat;
+    background-position: center 25%;
+    height: 100vh;
+    z-index: 10;
+}
+.body_2 {
+    background-image: url("bitcoin_logo.png");
+    background-size: auto 80%;
+    background-repeat: no-repeat;
+    background-position: center 25%;
+    height: 100vh;
+    z-index: 10;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 30px;
+    position: relative;
+}
+.title {
+    position: fixed;
+    top: 5%
+}
+.formy {
+    position: fixed;
+    bottom: 22%;
+    align-items: center;
+}
+.bitpredictor_logo {
+    width: 600px;
+    height: auto;
+    display: block;
+    position: relative;
+}
+.price_text {
+    display: block;
+}
+.price_box {
+    display: inline-block;
+    height: 60px;
+    width: 320px;
+    padding: 4px;
+    border: 0px rgb(145, 145, 145) solid;
+    border-radius: 2px;
+    background-color: rgba(209, 209, 209, 0.616);
+    font-size: 45px;
+    text-align: center;
+    color: rgb(124, 124, 124);
+    box-shadow: 2px 3px 10px rgb(141, 141, 141)
+}
+.address_box {
+    display: block;
+    width: 320px;
+    padding: 4px;
+    height: 25px;
+    border: 0px rgb(145, 145, 145) solid;
+    border-radius: 2px;
+    background-color: rgba(209, 209, 209, 0.616);
+    font-size: 22px;
+    margin-top: 15px;
+    text-align: center;
+    color: rgb(124, 124, 124);
+    box-shadow: 2px 3px 10px rgb(141, 141, 141)
+}
+.submit_box {
+    display: inline-block;
+    border: 0px rgb(145, 145, 145) solid;
+    border-radius: 2px;
+    background-color: rgba(209, 209, 209, 0.13);
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    color: rgb(124, 124, 124);
+    position: relative;
+    bottom: 5px;
+    box-shadow: 2px 3px 10px rgb(141, 141, 141)
+}
+input:hover.submit_box {
+    background-color: rgba(209, 209, 209, 0.349);
+}
+footer {
+    position: fixed;
+    bottom: -10px;
+    width: 100vw;
+}
+.bottom_box {
+    height: 110%;
+    width: 110vw;
+    border-top: 0px rgb(145, 145, 145) solid;
+    background-color: rgba(209, 209, 209, 0.616);
+    box-shadow: inset 0px 0px 40px rgb(141, 141, 141);
+}
+.bottom_text {
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    position: relative;
+    left: 0px;
+}
+.qm_box {
+    position: relative;
+    left: 5px;
+    top: 3px;
+    height: 100%;
+}
+.qm_img {
+    height: 30px;
+    width: auto;
+    opacity: 0.35;
+}
+img:hover.qm_img {
+    opacity: 0.6;
+}
+.coinhive-captcha {
+    position: fixed;
+    bottom: 9%;
+    width: 200px
+}
+.bottom_font {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: rgb(124, 124, 124);
+    display: inline-block;
+}
+.logo_t {
+    height: 20px;
+    width: auto;
+    padding-left: 5px;
+    border-left: 1px solid rgb(124, 124, 124)
+}
+.social {
+    position: fixed;
+    right: 10px;
+    bottom: -1px;
+    text-align: right
+}
+.me {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    color: rgb(124, 124, 124);
+    line-height: 0px;
+    position: relative;
+    bottom: -13px;
+    right: 35px;
+}
+.me_s {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+    color: rgb(228, 102, 0);
+    line-height: 0px
+}
+.info {
+    width: 100vw;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    color: rgb(124, 124, 124);
+    line-height: 0px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.705)
+}
+.info a{
+    color: rgb(216, 115, 0)
+}
+.info_2 {
+    width: 100vw;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: rgb(124, 124, 124);
+    line-height: 0px;
+    padding-top: 5vw;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.705)
+}
+

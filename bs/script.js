@@ -3,6 +3,7 @@
 create_button = document.getElementById('create_icon');
 block_creator = document.getElementById('block_creator');
 blocks = document.getElementById('blocks');
+side_blocks = document.getElementById('side_blocks');
 
 menu_button = document.getElementById('menu_button');
 menu = document.getElementById('menu');
@@ -18,6 +19,8 @@ sidechain_button = document.getElementById('sidechain_button');
 merge_button = document.getElementById('merge_button');
 block_button = document.getElementById('block_button');
 data_button = document.getElementById('data_button');
+side_block_button = document.getElementById('side_block_button');
+side_data_button = document.getElementById('side_data_button');
 
 input_data = document.createElement('div');
 input_data.innerHTML = '<div id="data"><input type="text" id="block_data"><input id="submit_data" type="button" value="Create Block" onclick="data_flag();spawn_block()"></div>';
@@ -84,7 +87,7 @@ setInterval(function () {
     if (newchain_flag != 0) {
         block_button.disabled = false;
         data_button.disabled = false;
-        sidechain_button.disabled = true;
+        sidechain_button.disabled = false;
     }
 },1);
 
@@ -123,14 +126,13 @@ document.body.addEventListener('click', function(e) {
 
 sidechain_button.addEventListener('click', function (e) {
     e.stopPropagation();
-    if (sidechain_flag == 0) {
-        sidechain_flag += 1;
-        merge_button.style.opacity = 1;
-    } else {
-        merge_button.style.opacity = 0.5;
-        sidechain_flag -= 1;
-    }
+    sidechain_creation();
+    console.log(side_chain);
+    side_block_button.style.display = 'block';
+    side_data_button.style.display = 'block';
 }, false);
+
+
 
 newchain_button.addEventListener('mouseover', function (e) {
     e.stopPropagation();
@@ -144,10 +146,14 @@ newchain_button.addEventListener('mouseout', function (e) {
 }, false);
 newchain_button.addEventListener('click', function (e) {
     e.stopPropagation();
-    blocks.innerHTML = '';
-    counter = 0;
-    spawn_block();
-    newchain_flag += 1;
+    if (newchain_flag == 0) {
+        blocks.innerHTML = '';
+        main_counter = 0;
+        spawn_block();
+        newchain_flag += 1;
+    } else {
+        location = location;
+    }
 }, false);
 
 sidechain_button.addEventListener('mouseover', function (e) {
@@ -186,6 +192,23 @@ block_button.addEventListener('click', function (e) {
     e.stopPropagation();
     spawn_block();
 }, false);
+
+side_block_button.addEventListener('mouseover', function (e) {
+    e.stopPropagation();
+    instruction_box.style.visibility = 'visible';
+    instruction_box.innerHTML = 'Creates a basic type of block [it will contain only index, timestamp and two hashes]';
+}, false);
+side_block_button.addEventListener('mouseout', function (e) {
+    e.stopPropagation();
+    instruction_box.style.visibility = 'hidden';
+    instruction_box.innerHTML = '';
+}, false);
+side_block_button.addEventListener('click', function (e) {
+    e.stopPropagation();
+    spawn_sideblock();
+}, false);
+
+
 
 data_button.addEventListener('mouseover', function (e) {
     e.stopPropagation();

@@ -69,13 +69,14 @@
     game_over_back.classList.add('game_over_back');
   const game_over = document.createElement('div');
     game_over.classList.add('game_over');
+  const play_again = document.createElement('div');
+    play_again.classList.add('play_again');
 
   function looser() {
+    document.body.appendChild(game_over);
     document.body.appendChild(game_over_back);
-    game_over_back.appendChild(game_over);
-    runing.pause();
+    document.body.appendChild(play_again);
   }
-
 
   function faint() {
     dwarf = document.getElementById("dwarfid");   
