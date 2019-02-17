@@ -60,6 +60,7 @@
         life3.classList.add('life');
             life3.id = "life3id";
         
+    alert("THIS GAME WORKS BEST IN GOOGLE CHROME, PLEASE OPEN IT ONLY IN THAT BROWSER!");
     
 
     const head_button = document.createElement('button');
