@@ -53,34 +53,32 @@ size();
        }
     }
  
-    function bg() {
-        var gradient = background_context.createLinearGradient(0, 0, 0, background.height);
-            gradient.addColorStop(0, "#303030");
-            gradient.addColorStop(1, "#000");
-        background_context.fillStyle = gradient;
-        background_context.fillRect(0, 0, background.width, background.height);
+function bg() {
+   var gradient = background_context.createLinearGradient(0, 0, 0, background.height);
+      gradient.addColorStop(0, "#303030");
+      gradient.addColorStop(1, "#000");
+      background_context.fillStyle = gradient;
+      background_context.fillRect(0, 0, background.width, background.height);
     }
  
-    function bounce_them(b) {
- 
-       if (b.x < b.r) {
-          b.x = b.r;
-          b.vx *= -1;
-       }
-       if (b.x > background.width - b.r) {
-          b.x = background.width - b.r;
-          b.vx *= -1;
-       }
- 
-       if (b.y - b.r < 0) {
-          b.y = b.r;
-          b.vy *= -1;
-       }
-       if (b.y > background.height - b.r) {
-          b.y = background.height - b.r;
-          b.vy *= -1;
-       }
-    }
+function bounce_them(b) {
+   if (b.x < b.r) {
+      b.x = b.r;
+      b.vx *= -1;
+   }
+   if (b.x > background.width - b.r) {
+      b.x = background.width - b.r;
+      b.vx *= -1;
+   }
+   if (b.y - b.r < 0) {
+      b.y = b.r;
+      b.vy *= -1;
+   }
+   if (b.y > background.height - b.r) {
+      b.y = background.height - b.r;
+      b.vy *= -1;
+   }
+}
  
     function move_them(p) {
         var dx = (p.x - X),
@@ -124,26 +122,19 @@ window.onmousemove = function(e) {
    X = e.clientX;
    Y = e.clientY;
 }
- 
 window.onmousedown = function() {
    mousedown = true;
 }
- 
 window.onmouseup = function() {
    mousedown = false;
    }
-    
-var mouseover=false;
-    
+let mouseover=false;
 window.onmouseover = function() {
    mouseover = true;
    }
-    
 window.onmouseout = function(){
    mouseover=false;
    }
- 
 place_them();
 loop();
-
- }
+}

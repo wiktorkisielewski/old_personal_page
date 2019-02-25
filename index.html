@@ -35,11 +35,11 @@
             <span class="introduction_font">
                 let me introduce myself...
             </span>
-            <div id="introduction_click"></div>
+            <div id="introduction_click" onclick="scroll_down()"></div>
         </div>
         <main>
-            <div class="box_title about_title">About me</div>
             <div class="box" id="about_me">
+                    <div class="box_title about_title">About me</div>
                 <div class="box_subtitle">Who am I?</div>
                 <span class="box_text">
                     I'm 22 years old front-end/web developer, currently living in Gdansk [Poland]. <br>
@@ -115,8 +115,9 @@
                                 </div>
                         </div>
             </div>
-            <div class="box_title folio_title">My projects</div>
+
             <div class="box" id="portfolio" style="background: none">
+            <div class="box_title folio_title">My projects</div>
                 <div class="project_box">
                     <div class="project_screen">
                         <img src="screens/dwarf_screen.png">
@@ -139,4 +140,5 @@
     </body>
     <script src="destruction.js"></script>
     <script src="backgrond.js"></script>
+    <script src="scroll_mechanics.js"></script>
 </html>
