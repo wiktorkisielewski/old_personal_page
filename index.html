@@ -1,82 +1,134 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
     <head>
-        <title>PORTFOLIO WK</title>
-        <link rel="stylesheet" type="text/css" href="main_styles.css">
+        <meta charset="utf-8">
+        <title>W.KISIELEWSKI</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <header>
-            <div class="title">
-                <span class="title_font">PORTFOLIO</span>
-            </div>
-            <div class="top_nav">
-                <li>
-                    <a href="https://github.com/wiktorkisielewski">GitHub</a>
-                </li>
-            </div>
-        </header>
-        <main id="main">
-            <div class="project_box">
-            <a href="btc_predictor/index.html">
-                <div class="project_title">BITPREDICTOR</div>
-                <div class="image" style="background-image: url(screens/bitpredictor_screen.png);"></div>
-                <div class="project_text">
-                    <span>This website collects Bitcoin price prediction from users, and rewards them if price was correctly predicted.<br><br>
-                    Created in PHP, vanilla Javascript, CSS and HTML.</span>
+        <nav id="menu_button">
+            <input type="checkbox"/>
+                <span></span>
+                <span></span>
+                <span></span>
+            <ul id="menu">
+                <a href="#"><li>Home</li></a>
+                <a href="#"><li>About me</li></a>
+                <a href="#"><li>Portfolio</li></a>
+                <a href="#"><li>Contact</li></a>
+                <a href="#"><li onclick="destruction_menu()">Destroy this<br>website</li></a>
+                <div class="signature">Wiktor Kisielewski<br> &copy; 2019</div>
+            </ul>
+        </nav>
+        
+            <canvas id=canvas></canvas> 
+        
+        <div class="welcome_box">
+            <span class="welcome_text">
+                Hello, <br>
+                my name is Wiktor. <br>
+                I am a &lt;coder&gt;<br>
+                & web designer.
+            </span>
+        </div>
+        <div id="introduction">
+            <span class="introduction_font">
+                let me introduce myself...
+            </span>
+            <div id="introduction_click"></div>
+        </div>
+        <main>
+            <div class="box_title about_title">About me</div>
+            <div class="box" id="about_me">
+                <div class="box_subtitle">Who am I?</div>
+                <span class="box_text">
+                    I'm 22 years old front-end/web developer, currently living in Gdansk [Poland]. <br>
+                    Passionate about design and distributed computing systems.
+                </span>
+                <div class="box_subtitle" style="margin-top: 10px">What I do?</div>
+                <span class="box_text">
+                    I create websites and apps. In my projects,
+                    I focus on<br> user experience combined with modern & simple design. 
+                </span>
+                <div class="box_subtitle" style="margin-top: 10px">How do I work?</div>
+                <span class="box_text">
+                    I'm continuously doing my best to stay up to date with current trends and upgrades,<br> 
+                    whether its about design or coding.
+                </span>
+                <div class="my_tools">
+                    <div class="tht">
+                        <div class="box_subtitle" style="margin-top: 10px">My languages:</div>
+                        <div class="logo_box">
+                            <div class="logo">
+                                <img src="logotypes/css3.png">
+                                <span class="logo_text">CSS 3</span>
+                            </div>
+                            <div class="logo">
+                                <img src="logotypes/html.png">
+                                <span class="logo_text">HTML 5</span>
+                            </div>
+                            <div class="logo">
+                                <img src="logotypes/js.png">
+                                <span class="logo_text">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tht">
+                        <div class="box_subtitle" style="margin-top: 10px">Design tools:</div>
+                        <div class="logo_box">
+                            <div class="logo">
+                                <img src="logotypes/ps.png">
+                                <span class="logo_text">Photoshop</span>
+                            </div>
+                            <div class="logo">
+                                <img src="logotypes/ai.png">
+                                <span class="logo_text">Illustrator</span>
+                            </div>
+                            <div class="logo">
+                                <img src="logotypes/id.png">
+                                <span class="logo_text">InDesign</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="progress">PROJECT ENDED</div>
-            </a>
+                <div class="box_subtitle" style="margin-top: 10px">I'm learning:</div>
+                        <div class="logo_box">
+                            <div class="logo">
+                                <img src="logotypes/git.png">
+                                <span class="logo_text">Git</span>
+                            </div>
+                            <div class="logo">
+                                <img src="logotypes/react.png">
+                                <span class="logo_text">React</span>
+                            </div>
+                            <div class="logo">
+                                <img src="logotypes/python.png">
+                                <span class="logo_text">Python</span>
+                            </div>
+                        </div>
             </div>
-            <div class="project_box">
-            <a href="bs/index.html">
-                <div class="project_title">BLOCKCHAIN SANDBOX</div>
-                <div class="image" style="background-image: url(screens/bs_screen.png);"></div>
-                <div class="project_text">
-                    <span>This app is aimed to help users understand blockchain structure.<br><br>
-                    Created in vanilla Javascript, CSS and HTML.</span>
+            <div class="box_title folio_title">My projects</div>
+            <div class="box" id="portfolio" style="background: none">
+                <div class="project_box">
+                    <div class="project_screen">
+                        <img src="screens/dwarf_screen.png">
+                    </div>
+                    <div class="project_description">
+                        <div class="project_title">Dwarf the game</div>
+                        <span class="project_text">
+                            Simple 8-bit styled browser game<br>
+                            Customize your avatar and choose weapon. <br>
+                            Run throught the endless 8-bit world while disintegrating blue birds.<br><br>
+                            Created in vanilla Javascript, CSS and HTML.<br>
+                        </span>
+                    </div>
                 </div>
-                <div class="progress">WORK IN PROGRESS [80%]</div>
-            </a>    
             </div>
-            <div class="project_box">
-            <a href="dwarf/index.html">
-                <div class="project_title">DWARF THE GAME</div>
-                <div class="image" style="background-image: url(screens/dwarf_screen.png);"></div>
-                <div class="project_text">
-                    <span>Simple 8-bit styled browser game
-
-                    Customize your avatar and choose weapon. 
-                    Run throught the endless 8-bit world while disintegrating blue birds.<br><br>
-                    Created in vanilla Javascript, CSS and HTML.</span>
-                </div>
-                <div class="progress">PROJECT ENDED</div>
-            </a>    
-            </div>
-            <div class="project_box">
-            <a href="carshop/index_w.html">
-                <div class="project_title">CAR MECHANIC WEBSITE</div>
-                <div class="image" style="background-image: url(screens/carshop_screen.png);"></div>
-                <div class="project_text">
-                    <span>Random car mechanic's website, inspirde by a template found on the internet.<br><br>
-                    Created in CSS and HTML.</span>
-                </div>
-                <div class="progress">WORK IN PROGRESS [75%]</div>
-            </a>    
-            </div>
-            <div class="project_box">
-            <a href="quiz/index.html">
-                <div class="project_title">CURRENCY QUIZ</div>
-                <div class="image" style="background-image: url(screens/quiz_screen.png);"></div>
-                <div class="project_text">
-                    <span>Simple 'yes/no' quiz style web application. Made in purpose of promoting Bitcoin.<br><br>
-                    Created in Javascript, CSS and HTML.</span>
-                </div>
-                <div class="progress">WORK IN PROGRESS [90%]</div>
-            </a>    
+            <div class="box" id="contact">
+                x
             </div>
         </main>
-        <footer>
-            <span class="signature">Wiktor Kisielewski 2019</span>
-        </footer>
     </body>
+    <script src="destruction.js"></script>
+    <script src="backgrond.js"></script>
 </html>
