@@ -25,8 +25,8 @@ function rand(min, max) {
 }
  
 function size() {
-    background.width = window.innerWidth;
-    background.height = window.innerHeight;
+    background.width = window.innerWidth + 2;
+    background.height = window.innerHeight + 2;
     horziontal_mid = background.width / 2;
     vertical_mid = background.height / 2;
 }

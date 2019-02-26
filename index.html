@@ -17,14 +17,18 @@
                 <a href="#"><li>Portfolio</li></a>
                 <a href="#"><li>Contact</li></a>
                 <a href="#"><li onclick="destruction_menu()">Destroy this<br>website</li></a>
+                <div id="neon_switch" onclick="neon()">
+                        <div id="neon_dot"></div>
+                    </div>
                 <div class="signature">Wiktor Kisielewski<br> &copy; 2019</div>
             </ul>
         </nav>
         
+           
             <canvas id=canvas></canvas> 
         
         <div class="welcome_box">
-            <span class="welcome_text">
+            <span id="welcome_text">
                 Hello, <br>
                 my name is Wiktor. <br>
                 I am a &lt;coder&gt;<br>
@@ -118,22 +122,9 @@
 
             <div class="box" id="portfolio" style="background: none">
             <div class="box_title folio_title">My projects</div>
-                <div class="project_box">
-                    <div class="project_screen">
-                        <img src="screens/dwarf_screen.png">
-                    </div>
-                    <div class="project_description">
-                        <div class="project_title">Dwarf the game</div>
-                        <span class="project_text">
-                            Simple 8-bit styled browser game<br>
-                            Customize your avatar and choose weapon. <br>
-                            Run throught the endless 8-bit world while disintegrating blue birds.<br><br>
-                            Created in vanilla Javascript, CSS and HTML.<br>
-                        </span>
-                    </div>
-                </div>
-            </div>
+                
             <div class="box" id="contact">
+            <div class="box_title about_title">Contact me</div>
                 x
             </div>
         </main>
@@ -141,4 +132,18 @@
     <script src="destruction.js"></script>
     <script src="backgrond.js"></script>
     <script src="scroll_mechanics.js"></script>
+    <script>
+        neon_flag = 0;
+        function neon() {
+            if (neon_flag == 0) {
+                document.getElementById('neon_dot').style.left = '20px';
+                document.getElementById('welcome_text').style.animation = 'colors 300ms infinite';
+                neon_flag += 1;
+            } else {
+                document.getElementById('neon_dot').style.left = '4px';
+                document.getElementById('welcome_text').style.animation = '';
+                neon_flag -= 1;
+            }
+        }
+    </script>
 </html>

@@ -19,7 +19,9 @@ main {
     flex-direction: column
 }
 .box {
-    margin: 50px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0%);
     margin-top: 10px;
     padding: 10px;
     color: rgb(255, 255, 255);
@@ -170,7 +172,7 @@ a:hover {
     transform: translate(0%, -50%);
     text-align: left
 }
-.welcome_text {
+#welcome_text {
     font-size: 60px;
     font-weight: 200;
     color: rgb(34, 34, 34);
@@ -178,7 +180,7 @@ a:hover {
     box-shadow: 5px 5px 0px rgb(0, 0, 0);
     transition: 250ms;
 }
-.welcome_text:hover {
+#welcome_text:hover {
     animation: colors 300ms infinite
 }
 @keyframes colors {
@@ -409,33 +411,25 @@ a:hover {
     text-align: center
 }
 
-.project_box {
-    display: flex;
-    flex-direction: row;
+#neon_switch {
+    position: relative;
+    top: 10px;
+    left: 75px;
+    background-color: #fff;
+    width: 40px;
+    height: 20px;
+    border-radius: 20px;
+    z-index: 100;
+    border:  1px solid rgb(145, 145, 145);
 }
-.project_description {
-    display: flex;
-    flex-direction: column
+#neon_dot {
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    top: 2px;
+    left: 4px;
+    border-radius: 50%;
+    border:  1px solid rgb(145, 145, 145);
+    transition: 100ms
 }
-.project_screen {
-    overflow: hidden;
-    margin-right: 5px;
-}
-.project_screen img {
-    width: 350px;
-    height: 195px;
-    filter: blur(3px);
-    -webkit-filter: blur(3px);
-}
-.project_title {
-    color: #fff;
-    font-size: 26px;
-    font-weight: 200;
-    padding-bottom: 5px;
-}
-.project_text {
-    color: #fff;
-    font-size: 20px;
-    font-weight: 200;
-    display: table;
-}
+
