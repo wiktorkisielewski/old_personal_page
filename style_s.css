@@ -1,0 +1,190 @@
+#menu_button {
+    position: fixed;
+    top: 35px;
+    right: 25px;
+    z-index: 9999;
+}
+#menu_button input {
+    width: 54px;
+    height: 44px;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
+#menu_button span {
+    display: block;
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #ffffff;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: 300ms
+}
+#menu_button span:first-child {
+    transform-origin: 0% 0%;
+}
+#menu_button span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+#menu_button input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: rgb(60, 60, 60);
+}
+#menu_button input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+#menu_button input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, 0px);
+}
+#menu {
+    position: fixed;
+    right: -220px;
+    width: max-content;
+    height: 100vh;
+    margin: -100px 0 0 -50px;
+    padding: 35px;
+    padding-top: 125px;
+    background: #ffffff;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transition: 400ms;
+    display: flex;
+    flex-direction: column
+}
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+    text-align: right
+}
+.signature {
+    margin-top: auto;
+    position: relative;
+    bottom: 100px;
+    color: #000;
+    font-size: 12px;
+    text-align: right
+}
+#menu_button input:checked ~ ul {
+    right: 0;
+}
+.weapon_backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(70, 70, 70, 0.521);
+    z-index: 10;
+}
+.destruction_instruction {
+    font-size: 24px;
+    min-width: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #000;
+    background: #fff;
+    padding: 20px;
+    border: 8px solid rgb(255, 252, 56);
+}
+.destruction_instruction::before {
+    content: " ";
+    position: absolute;
+    z-index: 1;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border: 8px dashed #000000;
+}
+.weapon_lobby {
+    display: flex;
+    flex-direction: row;
+}
+.weapon_image {
+    width: 100px;
+    height: 100px;
+    margin: 15px;
+    transition: 300ms;
+    z-index: 10;
+}
+.weapon_image:hover {
+    transform: scale(1.3);
+}
+.ak {
+    background-image: url(weapons/ak.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.minigun {
+    background-image: url(weapons/minigun.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.shotgun {
+    background-image: url(weapons/shotgun.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.flamethrower {
+    background-image: url(weapons/flamethrower.png);
+    background-repeat: no-repeat;
+    background-size: 100% 70%;
+    background-position: 0% 50%
+}
+.sniper {
+    background-image: url(weapons/sniper.png);
+    background-repeat: no-repeat;
+    background-size: 100% 75%;
+    background-position: 0% 50%
+}
+.rpg {
+    background-image: url(weapons/rpg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#countdown {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    font-size: 100px 
+}
+.close_it {
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    font-size: 30px;
+    z-index: 100;
+}
+@keyframes countdown {
+    0% {
+        color: #fff;
+        transform: scale(1) ;
+    }
+    100% {
+        transform: scale(1.5) ;       
+        color: rgb(199, 0, 0)
+    }
+}
+@-webkit-keyframes countdown {
+    0% {
+        color: #fff;
+        transform: scale(1) ;
+    }
+    100% {
+        transform: scale(1.5) ;       
+        color: rgb(199, 0, 0)
+    }
+}

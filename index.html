@@ -4,10 +4,11 @@
         <meta charset="utf-8">
         <title>W.KISIELEWSKI</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style_s.css">
     </head>
     <body>
-        <nav id="menu_button">
-            <input type="checkbox"/>
+        <nav id="menu_button" onclick="document.getElementById('click').style.display = 'block'">
+            <input type="checkbox" id="check_menu"/>
                 <span></span>
                 <span></span>
                 <span></span>
@@ -24,7 +25,7 @@
             </ul>
         </nav>
         
-           
+            <div id="click"></div>
             <canvas id=canvas></canvas> 
         
         <div class="welcome_box">
@@ -43,7 +44,7 @@
         </div>
         <main>
             <div class="box" id="about_me">
-                    <div class="box_title about_title">About me</div>
+                    <div class="box_title about_title" id="box_header">About me</div>
                 <div class="box_subtitle">Who am I?</div>
                 <span class="box_text">
                     I'm 22 years old front-end/web developer, currently living in Gdansk [Poland]. <br>
@@ -59,73 +60,84 @@
                     I'm continuously doing my best to stay up to date with current trends and upgrades,<br> 
                     whether its about design or coding.
                 </span>
-                <div class="my_tools">
-                    <div class="tht">
-                        <div class="box_subtitle" style="margin-top: 10px">My languages:</div>
-                        <div class="logo_box">
-                            <div class="logo">
-                                <img src="logotypes/css3.png">
-                                <span class="logo_text">CSS 3</span>
-                            </div>
-                            <div class="logo">
-                                <img src="logotypes/html.png">
-                                <span class="logo_text">HTML 5</span>
-                            </div>
-                            <div class="logo">
-                                <img src="logotypes/js.png">
-                                <span class="logo_text">JavaScript</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tht">
-                        <div class="box_subtitle" style="margin-top: 10px">Design tools:</div>
-                        <div class="logo_box">
-                            <div class="logo">
-                                <img src="logotypes/ps.png">
-                                <span class="logo_text">Photoshop</span>
-                            </div>
-                            <div class="logo">
-                                <img src="logotypes/ai.png">
-                                <span class="logo_text">Illustrator</span>
-                            </div>
-                            <div class="logo">
-                                <img src="logotypes/id.png">
-                                <span class="logo_text">InDesign</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box_subtitle" style="margin-top: 10px">I'm currently learning:</div>
-                        <div class="logo_box">
-                            <div class="logo">
-                                <img src="logotypes/git.png">
-                                <span class="logo_text">Git</span>
-                            </div>
-                            <div class="logo">
-                                <img src="logotypes/react.png">
-                                <span class="logo_text">React</span>
-                            </div>
-                            <div class="logo">
-                                <img src="logotypes/python.png">
-                                <span class="logo_text">Python</span>
-                            </div>
-                            <div class="logo">
-                                    <img src="logotypes/nodejs.png" style="width: 70px">
-                                    <span class="logo_text">Node.js</span>
+                <section class="skills">
+                    <div class="my_tools">
+                        <div class="tht">
+                            <div class="box_subtitle" style="margin-top: 10px">My languages:</div>
+                            <div class="logo_box">
+                                <div class="logo">
+                                    <img src="logotypes/css3.png">
+                                    <span class="logo_text">CSS 3</span>
                                 </div>
                                 <div class="logo">
-                                    <img src="logotypes/php.png">
-                                    <span class="logo_text">PHP</span>
+                                    <img src="logotypes/html.png">
+                                    <span class="logo_text">HTML 5</span>
                                 </div>
+                                <div class="logo">
+                                    <img src="logotypes/js.png">
+                                    <span class="logo_text">JavaScript</span>
+                                </div>
+                            </div>
                         </div>
+                        <div class="tht">
+                            <div class="box_subtitle" style="margin-top: 10px">Design tools:</div>
+                            <div class="logo_box">
+                                <div class="logo">
+                                    <img src="logotypes/ps.png">
+                                    <span class="logo_text">Photoshop</span>
+                                </div>
+                                <div class="logo">
+                                    <img src="logotypes/ai.png">
+                                    <span class="logo_text">Illustrator</span>
+                                </div>
+                                <div class="logo">
+                                    <img src="logotypes/id.png">
+                                    <span class="logo_text">InDesign</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box_subtitle" style="margin-top: 10px">I'm currently learning:</div>
+                            <div class="logo_box">
+                                <div class="logo">
+                                    <img src="logotypes/git.png">
+                                    <span class="logo_text">Git</span>
+                                </div>
+                                <div class="logo">
+                                    <img src="logotypes/react.png">
+                                    <span class="logo_text">React</span>
+                                </div>
+                                <div class="logo">
+                                    <img src="logotypes/python.png">
+                                    <span class="logo_text">Python</span>
+                                </div>
+                                <div class="logo">
+                                        <img src="logotypes/nodejs.png" style="width: 70px">
+                                        <span class="logo_text">Node.js</span>
+                                    </div>
+                                    <div class="logo">
+                                        <img src="logotypes/php.png">
+                                        <span class="logo_text">PHP</span>
+                                    </div>
+                            </div>
+                        </section>            
             </div>
 
             <div class="box" id="portfolio" style="background: none">
-            <div class="box_title folio_title">My projects</div>
+            <div class="box_title folio_title" id="box_header">My projects</div>
                 
             <div class="box" id="contact">
-            <div class="box_title about_title">Contact me</div>
-                x
+            <div class="box_title about_title" id="box_header">Contact me</div>
+                <form method="post" name="contact_form"
+                action="contact-form-handler.php">
+                    Your Name:
+                    <input type="text" name="name">
+                    Email Address:
+                    <input type="text" name="email">
+                    Message:
+                    <textarea name="message"></textarea>
+                    <input type="submit" value="Submit">
+                </form>
             </div>
         </main>
     </body>
@@ -138,12 +150,26 @@
             if (neon_flag == 0) {
                 document.getElementById('neon_dot').style.left = '20px';
                 document.getElementById('welcome_text').style.animation = 'colors 300ms infinite';
+                document.getElementById('box_header').style.animation = 'colors 300ms infinite';
                 neon_flag += 1;
             } else {
                 document.getElementById('neon_dot').style.left = '4px';
                 document.getElementById('welcome_text').style.animation = '';
+                document.getElementById('box_header').style.animation = '';
                 neon_flag -= 1;
             }
         }
+        document.getElementById('click').addEventListener('click', function (e) {
+            e.stopPropagation();
+            document.getElementById("check_menu").checked = false;
+            document.getElementById('click').style.display = 'none';
+        });
+        
+var frmvalidator  = new Validator("contactform");
+frmvalidator.addValidation("name","req","Please provide your name");
+frmvalidator.addValidation("email","req","Please provide your email");
+frmvalidator.addValidation("email","email",
+  "Please enter a valid email address");
+  
     </script>
 </html>
