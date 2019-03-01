@@ -25,6 +25,7 @@
             </ul>
         </nav>
         
+            <div id="home"></div>
             <div id="click"></div>
             <canvas id=canvas></canvas> 
         
@@ -36,14 +37,14 @@
                 & web designer.
             </span>
         </div>
-        <div id="introduction">
+        <nav id="introduction">
             <span class="introduction_font">
                 let me introduce myself...
             </span>
             <div id="introduction_click" onclick="scroll_down()"></div>
-        </div>
+        </nav>
         <main>
-            <div class="box" id="about_me">
+            <section class="box" id="about_me">
                     <div class="box_title about_title" id="box_header">About me</div>
                 <div class="box_subtitle">Who am I?</div>
                 <span class="box_text">
@@ -121,55 +122,56 @@
                                     </div>
                             </div>
                         </section>            
-            </div>
+            </section>
 
-            <div class="box" id="portfolio" style="background: none">
-            <div class="box_title folio_title" id="box_header">My projects</div>
-                
+            <div class="box" id="portfolio">
+            <div class="box_title folio_title" id="box_header_2">My projects</div>
+                <section class="project_list">
+                    <div onmouseover="display_project(0)" onmouseout="hide()" onclick="display_info(0)">Dwarft the Game</div>
+                    <div onmouseover="display_project(1)" onmouseout="hide()" onclick="display_info(1)">Blockchain Sandbox</div>
+                    <div onmouseover="display_project(2)" onmouseout="hide()" onclick="display_info(2)">Bitpredictor</div>
+                    <div onmouseover="display_project(3)" onmouseout="hide()" onclick="display_info(3)">Currency Quiz</div>
+                    <div onmouseover="display_project(4)" onmouseout="hide()" onclick="display_info(4)">Portfolio</div>
+                </section>
+                <div id="project_info">
+                    <section class="project_box">
+                    <div id="project_text"></div>
+                        <p id="project_tech"></p>
+                        <a href="" id="github_link" target="_blank">see code</a>
+                        <a href="" id="live_link" target="_blank">live version</a>
+                    </section>
+                </div>
+            </div>
             <div class="box" id="contact">
-            <div class="box_title about_title" id="box_header">Contact me</div>
-                <form method="post" name="contact_form"
-                action="contact-form-handler.php">
-                    Your Name:
-                    <input type="text" name="name">
-                    Email Address:
-                    <input type="text" name="email">
-                    Message:
-                    <textarea name="message"></textarea>
-                    <input type="submit" value="Submit">
-                </form>
+            <div class="box_title about_title" id="box_header_3">Contact me</div>
+            <div class="social_media">
+                    <a href="https://github.com/wiktorkisielewski" target="_blank">
+                        <img src="logotypes/github.png">
+                    </a>
+                    <a href="https://www.upwork.com/o/profiles/users/_~01c79b2ab70ec30ec2/" target="_blank">
+                        <img src="logotypes/logo-upwork.png">
+                    </a>
+            </div>
+                    <span class="box_text">
+                        If you have any reason to contact me, feel free to do it.<br>
+                        I'm open to all kind of questions, job offers or whatever your case is.<br> 
+                        Send an email, text message or simply call me.<br><br>
+                        <a class="contact" href = "mailto: wiktor.kisielewski@protonmail.com">
+                            <img src="mail.png">
+                            wiktor.kisielewski@protonmail.com
+                        </a><br><br>
+                        <a class="contact" href="tel:+48669644427">
+                            <img style="width: 35px;height: 35px;" src="phone.png">
+                            +48669644427
+                        </a><br><br>
+                        I will respond as soon as possible.<br>
+                        <div class="devices"></div>
+                    </span>
             </div>
         </main>
     </body>
     <script src="destruction.js"></script>
     <script src="backgrond.js"></script>
     <script src="scroll_mechanics.js"></script>
-    <script>
-        neon_flag = 0;
-        function neon() {
-            if (neon_flag == 0) {
-                document.getElementById('neon_dot').style.left = '20px';
-                document.getElementById('welcome_text').style.animation = 'colors 300ms infinite';
-                document.getElementById('box_header').style.animation = 'colors 300ms infinite';
-                neon_flag += 1;
-            } else {
-                document.getElementById('neon_dot').style.left = '4px';
-                document.getElementById('welcome_text').style.animation = '';
-                document.getElementById('box_header').style.animation = '';
-                neon_flag -= 1;
-            }
-        }
-        document.getElementById('click').addEventListener('click', function (e) {
-            e.stopPropagation();
-            document.getElementById("check_menu").checked = false;
-            document.getElementById('click').style.display = 'none';
-        });
-        
-var frmvalidator  = new Validator("contactform");
-frmvalidator.addValidation("name","req","Please provide your name");
-frmvalidator.addValidation("email","req","Please provide your email");
-frmvalidator.addValidation("email","email",
-  "Please enter a valid email address");
-  
-    </script>
+    <script src="portfolio.js"></script>
 </html>
