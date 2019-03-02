@@ -80,9 +80,48 @@ function hide() {
 }
 
 (function() {
+    view_port = 0;
+    l1 = document.getElementById('l1');
+    l2 = document.getElementById('l2');
+    l3 = document.getElementById('l3');
+    l4 = document.getElementById('l4');
+    l5 = document.getElementById('l5');
+    l6 = document.getElementById('l6');
+    l7 = document.getElementById('l7');
+    l8 = document.getElementById('l8');
+    l9 = document.getElementById('l9');
+    l10 = document.getElementById('l10');
+    l11 = document.getElementById('l11');
+
     window.addEventListener('scroll', function(e) {
         e.stopPropagation();
         hide();
+
+    logo_detector = document.getElementById('logo_detector');
+    logo_view = logo_detector.getBoundingClientRect();
+    if (view_port == 0) {
+        if (
+            logo_view.top >= 0 &&
+            logo_view.left >= 0 &&
+            logo_view.right <= (window.innerWidth || document.documentElement.clientWidth) &&
+            logo_view.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+        ) {
+            view_port += 1;
+            l1.style.animationPlayState= 'running';
+            l2.style.animationPlayState= 'running';
+            l3.style.animationPlayState= 'running';
+            l4.style.animationPlayState= 'running';
+            l5.style.animationPlayState= 'running';
+            l6.style.animationPlayState= 'running';
+            l7.style.animationPlayState= 'running';
+            l8.style.animationPlayState= 'running';
+            l9.style.animationPlayState= 'running';
+            l10.style.animationPlayState= 'running';
+            l11.style.animationPlayState= 'running';
+        } else {
+            console.log('Not in the viewport... whomp whomp');
+        }
+    }
     }, false)
 })();
 
@@ -91,7 +130,11 @@ function hide() {
 neon_flag = 0;
         function neon() {
             if (neon_flag == 0) {
-                document.getElementById('neon_dot').style.left = '20px';
+                if (document.getElementById('menu').offsetWidth != window.innerWidth) {
+                    document.getElementById('neon_dot').style.left = '20px';
+                } else {
+                    document.getElementById('neon_dot').style.left = '110px';
+                }
                 document.getElementById('welcome_text').style.animation = 'colors 300ms infinite';
                 document.getElementById('box_header').style.animation = 'colors 300ms infinite';
                 document.getElementById('box_header_2').style.animation = 'colors 300ms infinite';

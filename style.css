@@ -10,7 +10,8 @@
     scroll-snap-type:mandatory;
     scroll-snap-points-y:repeat(100vh);
     scroll-snap-type:y mandatory;
-    overflow-x:hidden
+    overflow-x:hidden;
+    background-color: rgb(32, 32, 32)
     }
     
     #about_me {
@@ -100,7 +101,7 @@
     }
     
     .devices {
-        z-index: -1;
+    z-index: -1;
     position:absolute;
     bottom:0;
     left:50%;
@@ -184,7 +185,7 @@
     #introduction {
     cursor:pointer;
     position:absolute;
-    bottom:5%;
+    bottom:35px;
     left:50%;
     transform:translate(-50%,0%)
     }
@@ -303,29 +304,6 @@
     font-size:20px;
     font-weight:200;
     text-align:center
-    }
-    
-    #neon_switch {
-    position:relative;
-    top:10px;
-    left:75px;
-    background-color:#fff;
-    width:40px;
-    height:20px;
-    border-radius:20px;
-    z-index:100;
-    border:1px solid #919191
-    }
-    
-    #neon_dot {
-    height:14px;
-    width:14px;
-    position:absolute;
-    top:2px;
-    left:4px;
-    border-radius:50%;
-    border:1px solid #a5a5a5;
-    transition:100ms
     }
     
     .contact {
@@ -472,3 +450,93 @@
     padding:10px;
     margin-top:20px;
     }
+
+    @keyframes pop {
+        0%, 100% {
+            transform: scale(1)
+        }
+        50% {
+            transform: scale(1.3)
+        }
+        
+    }
+     
+
+    #l1 {
+        animation: pop 300ms;
+        animation-delay: 150ms;
+        animation-play-state: paused;
+    }
+    #l2 {
+        animation: pop 300ms;
+        animation-delay: 225ms;
+        animation-play-state: paused;
+    }
+    #l3 {
+        animation: pop 300ms;
+        animation-delay: 300ms;
+        animation-play-state: paused;
+    }
+    #l4 {
+        animation: pop 300ms;
+        animation-delay: 375ms;
+        animation-play-state: paused;
+    }
+    #l5 {
+        animation: pop 300ms;
+        animation-delay: 450ms;
+        animation-play-state: paused;
+    }
+    #l6 {
+        animation: pop 300ms;
+        animation-delay: 525ms;
+        animation-play-state: paused;
+    }
+    #l7 {
+        animation: pop 300ms;
+        animation-delay: 600ms;
+        animation-play-state: paused;
+    }
+    #l8 {
+        animation: pop 300ms;
+        animation-delay: 675ms;
+        animation-play-state: paused;
+    }
+    #l9 {
+        animation: pop 300ms;
+        animation-delay: 750ms;
+        animation-play-state: paused;
+    }
+    #l10 {
+        animation: pop 300ms;
+        animation-delay: 825ms;
+        animation-play-state: paused;
+    }
+    #l11 {
+        animation: pop 300ms;
+        animation-delay: 900ms;
+        animation-play-state: paused;
+    }
+
+
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  
+        #canvas {
+            display: none
+        }
+        main {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            height: 100%;
+        }
+        body {
+            margin: 0;
+            padding: 0
+        }
+        .box {
+            position: absolute;
+            left: 0;
+        }
+        
+      }
