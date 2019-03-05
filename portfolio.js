@@ -3,6 +3,7 @@ project_text = document.getElementById('project_text');
 project_tech = document.getElementById('project_tech');
 github_link = document.getElementById('github_link');
 live_link = document.getElementById('live_link');
+how_to = document.getElementById('how_to');
 
 info_flag = 0;
 function display_project(num) {
@@ -11,6 +12,7 @@ function display_project(num) {
         project_tech.innerHTML = ``;
         github_link.style.opacity = '0';
         live_link.style.opacity = '0';
+        how_to.style.opacity = '1';
     };
     project_info.style.opacity = "1";
     project_info.style.visibility = "visible";
@@ -32,6 +34,7 @@ function display_info(num) {
     info_flag += 1;
     github_link.style.opacity = '1';
     live_link.style.opacity = '1';
+    how_to.style.opacity = '0';
     if (num == 0) {
         project_text.innerHTML = `A simple run&shoot platform game with an 8-bit style graphics.
         Endless gameplay focused on stacking points by killing blue birds while avoiding trees.
@@ -99,6 +102,7 @@ function hide() {
 
     logo_detector = document.getElementById('logo_detector');
     logo_view = logo_detector.getBoundingClientRect();
+
     if (view_port == 0) {
         if (
             logo_view.top >= 0 &&
@@ -154,3 +158,8 @@ neon_flag = 0;
             document.getElementById("check_menu").checked = false;
             document.getElementById('click').style.display = 'none';
         });
+
+function screen_mobile() {
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+}
