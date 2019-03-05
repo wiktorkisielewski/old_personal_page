@@ -560,7 +560,7 @@
     }
     
     body {
-    scroll-snap-type:mandatory;
+    scroll-snap-type:none;
     overflow-x:hidden
     }
     
@@ -634,7 +634,9 @@
     text-align:center;
     font-size:70px;
     position:absolute;
-    top:10px
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
     }
     
     #project_info {
