@@ -41,14 +41,14 @@ function display_info(num) {
         Avatar customization and weapon selections possible.`
         project_tech.innerHTML = `Vanilla JS / HTML / CSS`;
         github_link.setAttribute('href', 'https://github.com/wiktorkisielewski/DWARF_THE_GAME');
-        live_link.setAttribute('href', 'https://github.com/wiktorkisielewski/DWARF_THE_GAME');
+        live_link.setAttribute('href', 'DWARF_THE_GAME/index.html');
     } else if (num == 1) {
         project_text.innerHTML = `Web app made to visualize the blockchain database structure. 
         Allows standard block creation as well as custom data input. Includes fork function with 
-        a sidechain production. Simulates hash function.`
+        a sidechain production. Simulates hash function. <br><br> [work in progress]`
         project_tech.innerHTML = `Vanilla JS / HTML / CSS`;
         github_link.setAttribute('href', 'https://github.com/wiktorkisielewski/BLOCKCHAIN_SANDBOX');
-        live_link.setAttribute('href', 'https://github.com/wiktorkisielewski/DWARF_THE_GAME');
+        live_link.setAttribute('href', 'blockchain/index.html');
     } else if (num == 2) {
         project_text.innerHTML = `This website collects bitcoin price prediction and address.
         Every submission requires a short usage of users CPU to generate a tiny amount of 
@@ -56,20 +56,20 @@ function display_info(num) {
         distributed to the correct prediction owner.`
         project_tech.innerHTML = `PHP / Vanilla JS / HTML / CSS`;
         github_link.setAttribute('href', 'https://github.com/wiktorkisielewski/Bitpredictor.org');
-        live_link.setAttribute('href', 'https://github.com/wiktorkisielewski/DWARF_THE_GAME');
+        live_link.setAttribute('href', 'btc_predictor/index.html');
     } else if (num == 3) {
         project_text.innerHTML = `A or B, quiz-like application. It was made to allow an easy comparison 
         between standard (FIAT) money and cryptocurrencies. After finishing this quiz user gets his score 
-        and suggestions depending on what the results were. For now two languages available.`
+        and suggestions depending on what the results were. For now two languages available. <br><br> [work in progress]`
         project_tech.innerHTML = `Vanilla JS / HTML / CSS`;
         github_link.setAttribute('href', 'https://github.com/wiktorkisielewski/currency_quiz');
-        live_link.setAttribute('href', 'https://github.com/wiktorkisielewski/DWARF_THE_GAME');
+        live_link.setAttribute('href', 'currency_quiz/index.html');
     } else if (num == 4) {
         project_text.innerHTML = `My own portfolio, the one you are currently exploring. Designed
         for both, desktop and mobile.  Background that interacts with users mouse moves and a few hidden easter-eggs.`
         project_tech.innerHTML = `Vanilla JS / HTML / CSS`;
         github_link.setAttribute('href', 'https://github.com/wiktorkisielewski/DWARF_THE_GAME');
-        live_link.setAttribute('href', 'https://github.com/wiktorkisielewski/DWARF_THE_GAME');
+        live_link.setAttribute('href', '#');
     }
 }
 function hide() {

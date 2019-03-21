@@ -636,7 +636,12 @@
     position:absolute;
     top:50%;
     left: 50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    height: max-content;
+    }
+
+    .project_list div {
+        font-size: 45px
     }
     
     #project_info {
@@ -675,5 +680,9 @@
     
     .folio_title {
     box-shadow:10px 10px 0 #9e1800
+    }
+
+    #how_to {
+        display: none;
     }
     }
