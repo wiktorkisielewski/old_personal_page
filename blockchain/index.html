@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header class="top_bar">
+            <div class="logo">
+                BLOCKCHAIN SANDBOX
+            </div>
+            <div class="menu_button" id="menu_button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu" id="menu">
+                <li>
+                    <span class="menu_font" id="basics">BASICS</span>
+                </li>
+                <li>
+                    <span class="menu_font" id="about_hash">ABOUT</br>HASHING</span>
+                </li>
+                <li>
+                    <span class="menu_font" id="explore_more">EXPLORE</br>MORE</span>
+                </li>
+            </div>
+        </header>
+        <main>
+            <div class="info_box" id="info_box">
+                <div class="info_text" id="info_text"></div>
+            </div>
+            <div class="create_tool">
+                <div class="create_icon" id="create_icon"></div>
+                <div class="block_creator" id="block_creator">
+                    <li>
+                        <button id="newchain_button">New chain</button>
+                    </li>
+                    <li>
+                        <button disabled id="sidechain_button">Side chain</button>
+                    </li>
+                    <li>
+                        <button  disabled id="merge_button">Merge chains</button>
+                    </li>
+                    <li>
+                        <button disabled id="block_button" onclick="block_creation()">Create</br>empty block</button>
+                    </li>
+                    <li>
+                        <button  id="side_block_button" onclick="sideblock_creation()">Create</br>empty block</br>[SIDECHAIN]</button>
+                    </li>
+                    <li>
+                        <button  disabled id="data_button" onclick="block_creation()">Create block</br>with custom data</button>
+                    </li>
+                    <li>
+                        <button   id="side_data_button" onclick="sideblock_creation()">Create block</br>with custom data</br>[SIDECHAIN]</button>
+                    </li>
+                    <li>
+                        <div class="instruction_box" id="instruction_box"></div>
+                    </li>
+                </div>
+            </div>
+        </main>
+        <section id="chains">
+            <div id="blocks"></div>
+            <div id="side_blocks"></div>
+        </section>
+        <div id="zoom_out" onmousedown="zooming_out(0)" onmouseup="zooming_out(1)"></div>
+        <div id="zoom_in" onmousedown="zooming_in(0)" onmouseup="zooming_in(1)"></div>
+        <footer>
+            <span class='footer_text'>
+                <a href="" class='sign'>Wiktor Kisielewski | </a>
+                2019 No rights reserved ₿ | 
+                <a href="tips.html" class='sign'>tips</a>
+            </span>
+        </footer>
+            <script src="date_format.js"></script>
+            <script src="chain.js"></script>
+            <script src="chain_visualization.js"></script>
+            <script src="script.js"></script>
+    </body>
+</html>
