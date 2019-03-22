@@ -63,7 +63,7 @@ function display_info(num) {
         and suggestions depending on what the results were. For now two languages available. <br><br> [work in progress]`
         project_tech.innerHTML = `Vanilla JS / HTML / CSS`;
         github_link.setAttribute('href', 'https://github.com/wiktorkisielewski/currency_quiz');
-        live_link.setAttribute('href', 'currency_quiz/index.html');
+        live_link.setAttribute('href', 'money_/index.html');
     } else if (num == 4) {
         project_text.innerHTML = `Website with an integrated online store, based on WordPress CMS. Only avaiable in Polish version.
         <br><br> [work in progress]`;
