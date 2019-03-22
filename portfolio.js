@@ -25,7 +25,7 @@ function display_project(num) {
     } else if (num == 3) {
         project_info.style.backgroundImage = "url(screens/quiz_screen.png)";
     } else if (num == 4) {
-        project_info.style.backgroundImage = "url(screens/portfolio.png)";
+        project_info.style.backgroundImage = "url(screens/uszylamsobie_screen.png)";
     }
 }
 
@@ -65,11 +65,11 @@ function display_info(num) {
         github_link.setAttribute('href', 'https://github.com/wiktorkisielewski/currency_quiz');
         live_link.setAttribute('href', 'currency_quiz/index.html');
     } else if (num == 4) {
-        project_text.innerHTML = `My own portfolio, the one you are currently exploring. Designed
-        for both, desktop and mobile.  Background that interacts with users mouse moves and a few hidden easter-eggs.`
-        project_tech.innerHTML = `Vanilla JS / HTML / CSS`;
-        github_link.setAttribute('href', 'https://github.com/wiktorkisielewski/DWARF_THE_GAME');
-        live_link.setAttribute('href', '#');
+        project_text.innerHTML = `Website with an integrated online store, based on WordPress CMS. Only avaiable in Polish version.
+        <br><br> [work in progress]`;
+        project_tech.innerHTML = `WordPress / PHP / CSS`;
+        github_link.setAttribute('href', 'http://uszylamsobie.pl/');
+        live_link.setAttribute('href', 'http://uszylamsobie.pl/');
     }
 }
 function hide() {
